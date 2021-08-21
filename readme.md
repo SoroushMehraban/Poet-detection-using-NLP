@@ -9,6 +9,7 @@ We may achieve this by extracting each word from the training data and counting 
 
 ### 2. Creating language model for each poet.
 In this step, we build a unigram and bigram language model for each poet. The backoff model is then used as a smoothing technique, as follows:
+
 ![Backoff model](images/Backoff-model.png)
 ### 3. Calculating the probability of verses on the test set according to the created language models.
 Last but not least, for each language model we created in the step 2, we calculate the probability of the given verse on the test set. To do that, for each verse, we calculate three probabilities, one for each poet. Finally, the poet with the greatest probability is the predicted poet.
